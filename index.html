@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+    <div class="board">
+        <div class="row" data-row="7">
+            <div class="cell b" data-col="0" data-type="null"></div>
+            <div class="cell w" data-col="1" data-type="null"></div>
+            <div class="cell b" data-col="2" data-type="null"></div>
+            <div class="cell w" data-col="3" data-type="null"></div>
+            <div class="cell b" data-col="4" data-type="null"></div>
+            <div class="cell w" data-col="5" data-type="null"></div>
+            <div class="cell b" data-col="6" data-type="null"></div>
+            <div class="cell w" data-col="7" data-type="null"></div>
+        </div>
+        <div class="row" data-row="6">
+            <div class="cell w" data-col="0" data-type="null"></div>
+            <div class="cell b" data-col="1" data-type="null"></div>
+            <div class="cell w" data-col="2" data-type="null"></div>
+            <div class="cell b" data-col="3" data-type="null"></div>
+            <div class="cell w" data-col="4" data-type="null"></div>
+            <div class="cell b" data-col="5" data-type="null"></div>
+            <div class="cell w" data-col="6" data-type="null"></div>
+            <div class="cell b" data-col="7" data-type="null"></div>
+        </div>
+        <div class="row" data-row="5">
+            <div class="cell b" data-col="0" data-type="null"></div>
+            <div class="cell w" data-col="1" data-type="null"></div>
+            <div class="cell b" data-col="2" data-type="null"></div>
+            <div class="cell w" data-col="3" data-type="null"></div>
+            <div class="cell b" data-col="4" data-type="null"></div>
+            <div class="cell w" data-col="5" data-type="null"></div>
+            <div class="cell b" data-col="6" data-type="null"></div>
+            <div class="cell w" data-col="7" data-type="null"></div>
+        </div>
+        <div class="row" data-row="4">
+            <div class="cell w" data-col="0" data-type="null"></div>
+            <div class="cell b" data-col="1" data-type="null"></div>
+            <div class="cell w" data-col="2" data-type="null"></div>
+            <div class="cell b" data-col="3" data-type="null"></div>
+            <div class="cell w" data-col="4" data-type="null"></div>
+            <div class="cell b" data-col="5" data-type="null"></div>
+            <div class="cell w" data-col="6" data-type="null"></div>
+            <div class="cell b" data-col="7" data-type="null"></div>
+        </div>
+        <div class="row" data-row="3">
+            <div class="cell b" data-col="0" data-type="null"></div>
+            <div class="cell w" data-col="1" data-type="null"></div>
+            <div class="cell b" data-col="2" data-type="null"></div>
+            <div class="cell w" data-col="3" data-type="null"></div>
+            <div class="cell b" data-col="4" data-type="null"></div>
+            <div class="cell w" data-col="5" data-type="null"></div>
+            <div class="cell b" data-col="6" data-type="null"></div>
+            <div class="cell w" data-col="7" data-type="null"></div>
+        </div>
+        <div class="row" data-row="2">
+            <div class="cell w" data-col="0" data-type="null"></div>
+            <div class="cell b" data-col="1" data-type="null"></div>
+            <div class="cell w" data-col="2" data-type="null"></div>
+            <div class="cell b" data-col="3" data-type="null"></div>
+            <div class="cell w" data-col="4" data-type="null"></div>
+            <div class="cell b" data-col="5" data-type="null"></div>
+            <div class="cell w" data-col="6" data-type="null"></div>
+            <div class="cell b" data-col="7" data-type="null"></div>
+        </div>
+        <div class="row" data-row="1">
+            <div class="cell b" data-col="0" data-type="null"></div>
+            <div class="cell w" data-col="1" data-type="null"></div>
+            <div class="cell b" data-col="2" data-type="null"></div>
+            <div class="cell w" data-col="3" data-type="null"></div>
+            <div class="cell b" data-col="4" data-type="null"></div>
+            <div class="cell w" data-col="5" data-type="null"></div>
+            <div class="cell b" data-col="6" data-type="null"></div>
+            <div class="cell w" data-col="7" data-type="null"></div>
+        </div>
+        <div class="row" data-row="0">
+            <div class="cell w" data-col="0" data-type="null"></div>
+            <div class="cell b" data-col="1" data-type="null"></div>
+            <div class="cell w" data-col="2" data-type="null"></div>
+            <div class="cell b" data-col="3" data-type="null"></div>
+            <div class="cell w" data-col="4" data-type="null"></div>
+            <div class="cell b" data-col="5" data-type="null"></div>
+            <div class="cell w" data-col="6" data-type="null"></div>
+            <div class="cell b" data-col="7" data-type="null"></div>
+        </div>
+    </div>
+
+    <script>
+        let wsm;
+    // settup the wasm c++ junk
+    var Module = {
+        onRuntimeInitialized: function() {
+
+        window.getMoves = Module.getMoves;
+        window.move = Module.move;
+
+        }
+        };
+
+
+    </script>
+  
+    <script src="chessC++.js"></script>
+
+ 
+    <script src="main.js"></script>
+
+
+
+</body>
+</html>

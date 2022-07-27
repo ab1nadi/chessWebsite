@@ -1,0 +1,58 @@
+body
+{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    margin-top:100px;
+}
+
+.board
+{
+    border: 1px solid black;
+}
+
+.row
+{
+    width:auto;
+    display:flex;
+}
+.cell
+{
+    position:relative;
+    padding:none;
+    margin:none;
+    width:50px;
+    height:50px;
+
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    font-size:50px;
+}
+
+
+.moveOption
+{
+    border-radius:100px;
+    background-color:rgba(0, 0, 0, 0.7);
+    height:20px;
+    width:20px;
+    position:absolute;
+}
+
+.b 
+{
+    background-color:#65adff;
+}
+
+
+
+
+
+.highlighted
+{
+    background-color:yellow;
+}
+
+
+
