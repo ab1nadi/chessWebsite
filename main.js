@@ -66,14 +66,6 @@ class Type {
   }
 
 
-
-
-
-
-
-
-
-
 // add the onclick listener to each cell
 let cells = document.getElementsByClassName('cell');
 for(let i = 0; i<cells.length; i++)
@@ -97,8 +89,8 @@ function initGame()
     let b_rook1 = getCell(7,0);
     let b_knight1 = getCell(7,1);
     let b_bishop1 = getCell(7,2);
-    let b_king = getCell(7,3);
-    let b_queen = getCell(7,4);
+    let b_king = getCell(7,4);
+    let b_queen = getCell(7,3);
     let b_bishop2 = getCell(7,5);
     let b_knight2 = getCell(7,6);
     let b_rook2 = getCell(7,7);
@@ -160,8 +152,8 @@ function initGame()
     let w_rook1 = getCell(0,0);
     let w_knight1 = getCell(0,1);
     let w_bishop1 = getCell(0,2);
-    let w_king = getCell(0,3);
-    let w_queen = getCell(0,4);
+    let w_king = getCell(0,4);
+    let w_queen = getCell(0,3);
     let w_bishop2 = getCell(0,5);
     let w_knight2 = getCell(0,6);
     let w_rook2 = getCell(0,7);
@@ -257,12 +249,14 @@ function clickListener(event)
 
             let parent = current.parentNode;
 
-            let r = parseInt(parent.dataset.row);
-            let c = parseInt(current.dataset.col);
+            let y = parseInt(parent.dataset.row);
+            let x = parseInt(current.dataset.col);
 
-            // add the possible moves 
-            // by calling the exposed c++ function 
-            var moves = window.getMoves(r, c);
+
+            console.log(y,x)
+
+    
+            var moves = window.getMoves(x,y);
 
 
             for(let row = 0; row<8; row++)
@@ -339,7 +333,7 @@ function clickListener(event)
             current = null;
 
 
-            window.move(positionR,positionC,moveR,moveC);
+            window.move(positionC, positionR, moveC, moveR);
 
 
 

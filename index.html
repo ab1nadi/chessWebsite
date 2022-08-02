@@ -96,9 +96,10 @@
     // settup the wasm c++ junk
     var Module = {
         onRuntimeInitialized: function() {
-
-        window.getMoves = Module.getMoves;
-        window.move = Module.move;
+            
+            Module.init();
+            window.getMoves = (x,y)=>{ return Module.getMoves(x,y);};
+            window.move = Module.move;
 
         }
         };
